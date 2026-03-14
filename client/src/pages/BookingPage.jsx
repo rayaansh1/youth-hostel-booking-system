@@ -76,7 +76,7 @@ const BookingPage = () => {
       // Offline fallback — still open WhatsApp
       const bookingId = 'YHA' + Date.now().toString().slice(-6);
       const msg = `🏨 *NEW BOOKING - Youth Hostel Agra*\n\n📋 *Booking ID:* ${bookingId}\n👤 *Guest:* ${form.guestName}\n📞 *Phone:* ${form.guestPhone}\n📧 *Email:* ${form.guestEmail}\n🛏️ *Room:* ${room.name}\n📅 *Check-in:* ${form.checkIn}\n📅 *Check-out:* ${form.checkOut}\n👥 *Guests:* ${form.guests}\n💰 *Total:* ₹${calcTotal()}\n📝 *Requests:* ${form.specialRequests || 'None'}`;
-      window.open(`https://wa.me/919368054835?text=${encodeURIComponent(msg)}`, '_blank');
+      window.open(`https://wa.me/917060563072?text=${encodeURIComponent(msg)}`, '_blank');
       navigate('/booking-confirm', { state: { booking: { bookingId, ...form, roomName: room.name, totalAmount: calcTotal() }, room } });
     }
     setLoading(false);
@@ -94,14 +94,14 @@ const BookingPage = () => {
         </div>
       </div>
 
-<div className="booking-grid" style={{ maxWidth: 1100, margin: '0 auto', padding: '60px 24px', display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 380px', gap: 40 }}>
+      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '60px 24px', display: 'grid', gridTemplateColumns: '1fr 380px', gap: 40 }} className="booking-grid">
 
         {/* Booking Form */}
         <div>
           <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 26, fontWeight: 700, color: '#FFF', marginBottom: 8 }}>Guest Information</h2>
           <div style={{ width: 40, height: 2, background: '#C9A84C', marginBottom: 32 }} />
           <form onSubmit={handleSubmit}>
-            <div className="form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 20 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 20 }} className="booking-form-grid">
               {[
                 { label: 'Full Name *', key: 'guestName', type: 'text', placeholder: 'Enter your full name' },
                 { label: 'Email Address *', key: 'guestEmail', type: 'email', placeholder: 'your@email.com' },
@@ -182,7 +182,7 @@ const BookingPage = () => {
                 </div>
               </div>
 
-              <a href="https://wa.me/919368054835" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 20, padding: '11px', background: '#25D366', color: '#FFF', borderRadius: 2, fontSize: 13, textDecoration: 'none', fontWeight: 600 }}>
+              <a href="https://wa.me/917060563072" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 20, padding: '11px', background: '#25D366', color: '#FFF', borderRadius: 2, fontSize: 13, textDecoration: 'none', fontWeight: 600 }}>
                 💬 Chat with Hostel
               </a>
             </div>
@@ -190,25 +190,15 @@ const BookingPage = () => {
         </div>
       </div>
 
-        <style>{`
-@media (max-width:900px){
-  .booking-grid{
-    grid-template-columns:1fr !important;
-  }
-}
-
-@media (max-width:700px){
-  .form-grid{
-    grid-template-columns:1fr !important;
-  }
-}
-
-@media (max-width:600px){
-  .booking-grid{
-    padding:20px !important;
-  }
-}
-`}</style>
+      <style>{`
+        @media(max-width:900px){
+          .booking-grid{grid-template-columns:1fr!important;}
+          .booking-form-grid{grid-template-columns:1fr!important;}
+        }
+        @media(max-width:600px){
+          .booking-grid{padding:20px 16px!important;}
+        }
+      `}</style>
     </div>
   );
 };

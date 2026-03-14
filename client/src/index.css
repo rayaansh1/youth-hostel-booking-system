@@ -25,36 +25,34 @@ body { font-family: 'DM Sans', sans-serif; background: var(--dark); color: #FFF;
 @media (max-width: 768px) { .hide-mobile { display: none !important; } }
 @media (min-width: 769px) { .show-mobile { display: none !important; } }
 
-/* ===== MOBILE RESPONSIVE FIX ===== */
+/* ===== MOBILE RESPONSIVE FIXES ===== */
+@media (max-width: 768px) {
+  /* Navbar */
+  .hide-mobile { display: none !important; }
+  .show-mobile { display: block !important; }
 
-img{
-  max-width:100%;
-  height:auto;
+  /* Booking grid */
+  .booking-grid { grid-template-columns: 1fr !important; padding: 20px 16px !important; }
+  .booking-form-grid { grid-template-columns: 1fr !important; }
+
+  /* Explore grid */
+  section div[style*="repeat(auto-fit"] { grid-template-columns: 1fr !important; }
+
+  /* General padding fix on mobile */
+  section { padding-left: 16px !important; padding-right: 16px !important; }
+
+  /* Rooms grid */
+  div[style*="minmax(380px"] { grid-template-columns: 1fr !important; }
+
+  /* Hero text size */
+  h1 { font-size: clamp(1.8rem, 8vw, 3rem) !important; }
+
+  /* Govt header */
+  .govt-header { flex-direction: column !important; text-align: center !important; gap: 8px !important; }
 }
 
-/* Prevent horizontal scrolling */
-body{
-  overflow-x:hidden;
-}
-
-/* Stack sections on mobile */
-@media (max-width:768px){
-
-  .container{
-    width:100%;
-    padding:15px;
-  }
-
-  .booking-container{
-    flex-direction:column !important;
-  }
-
-  .room-card{
-    width:100% !important;
-  }
-
-  form{
-    width:100% !important;
-  }
-
+@media (max-width: 480px) {
+  /* Very small screens */
+  body { font-size: 14px; }
+  .booking-grid { padding: 16px 12px !important; }
 }

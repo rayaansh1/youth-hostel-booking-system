@@ -117,7 +117,7 @@ export default function BookingConfirmPage() {
           <button onClick={handleDownloadPDF} style={{ flex:1, padding:'14px', background:'linear-gradient(135deg,#C9A84C,#9B7D35)', color:'#000', border:'none', borderRadius:6, fontSize:14, fontWeight:700, cursor:'pointer', fontFamily:'DM Sans,sans-serif', letterSpacing:1 }}>
             📄 Download PDF Receipt
           </button>
-          <a href={`https://wa.me/919368054835?text=Booking+Confirmed+${booking.bookingId}+for+${booking.roomName}+CheckIn:${booking.checkIn}`} target="_blank" rel="noreferrer"
+          <a href={`https://wa.me/917060563072?text=Booking+Confirmed+${booking.bookingId}+for+${booking.roomName}+CheckIn:${booking.checkIn}`} target="_blank" rel="noreferrer"
             style={{ flex:1, padding:'14px', background:'#25D366', color:'#FFF', border:'none', borderRadius:6, fontSize:14, fontWeight:700, cursor:'pointer', fontFamily:'DM Sans,sans-serif', letterSpacing:1, textDecoration:'none', textAlign:'center', display:'block' }}>
             💬 Share on WhatsApp
           </a>
