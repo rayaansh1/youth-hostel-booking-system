@@ -94,14 +94,14 @@ const BookingPage = () => {
         </div>
       </div>
 
-      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '60px 24px', display: 'grid', gridTemplateColumns: '1fr 380px', gap: 40 }}>
+<div className="booking-grid" style={{ maxWidth: 1100, margin: '0 auto', padding: '60px 24px', display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 380px', gap: 40 }}>
 
         {/* Booking Form */}
         <div>
           <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 26, fontWeight: 700, color: '#FFF', marginBottom: 8 }}>Guest Information</h2>
           <div style={{ width: 40, height: 2, background: '#C9A84C', marginBottom: 32 }} />
           <form onSubmit={handleSubmit}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 20 }}>
+            <div className="form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 20 }}>
               {[
                 { label: 'Full Name *', key: 'guestName', type: 'text', placeholder: 'Enter your full name' },
                 { label: 'Email Address *', key: 'guestEmail', type: 'email', placeholder: 'your@email.com' },
@@ -190,7 +190,25 @@ const BookingPage = () => {
         </div>
       </div>
 
-      <style>{`@media(max-width:900px){.booking-grid{grid-template-columns:1fr!important;}}`}</style>
+        <style>{`
+@media (max-width:900px){
+  .booking-grid{
+    grid-template-columns:1fr !important;
+  }
+}
+
+@media (max-width:700px){
+  .form-grid{
+    grid-template-columns:1fr !important;
+  }
+}
+
+@media (max-width:600px){
+  .booking-grid{
+    padding:20px !important;
+  }
+}
+`}</style>
     </div>
   );
 };
