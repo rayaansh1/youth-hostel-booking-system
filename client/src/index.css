@@ -24,3 +24,37 @@ body { font-family: 'DM Sans', sans-serif; background: var(--dark); color: #FFF;
 
 @media (max-width: 768px) { .hide-mobile { display: none !important; } }
 @media (min-width: 769px) { .show-mobile { display: none !important; } }
+
+/* ===== MOBILE RESPONSIVE FIX ===== */
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+/* Prevent horizontal scrolling */
+body{
+  overflow-x:hidden;
+}
+
+/* Stack sections on mobile */
+@media (max-width:768px){
+
+  .container{
+    width:100%;
+    padding:15px;
+  }
+
+  .booking-container{
+    flex-direction:column !important;
+  }
+
+  .room-card{
+    width:100% !important;
+  }
+
+  form{
+    width:100% !important;
+  }
+
+}
