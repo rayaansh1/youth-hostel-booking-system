@@ -147,7 +147,7 @@ const BookingPage = () => {
 
         {/* Booking Summary */}
         <div>
-          <div style={{ background: '#1A1A1A', border: '1px solid rgba(201,168,76,0.2)', borderRadius: 6, overflow: 'hidden', position: 'sticky', top: 100 }}>
+          <div style={{ background: '#1A1A1A', border: '1px solid rgba(201,168,76,0.2)', borderRadius: 6, overflow: 'hidden', position: 'sticky', top: 100 }} className="booking-sticky">
             <img src={room.img} alt={room.name} style={{ width: '100%', height: 200, objectFit: 'cover' }} />
             <div style={{ padding: 28 }}>
               <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 20, fontWeight: 700, color: '#FFF', marginBottom: 6 }}>{room.name}</h3>
@@ -191,12 +191,39 @@ const BookingPage = () => {
       </div>
 
       <style>{`
+        /* Tablet */
         @media(max-width:900px){
           .booking-grid{grid-template-columns:1fr!important;}
           .booking-form-grid{grid-template-columns:1fr!important;}
+          .booking-sticky{position:static!important;top:auto!important;}
         }
-        @media(max-width:600px){
-          .booking-grid{padding:20px 16px!important;}
+        /* iPhone Pro, Android (up to 430px) */
+        @media(max-width:430px){
+          .booking-grid{
+            grid-template-columns:1fr!important;
+            padding:16px 12px!important;
+            gap:16px!important;
+          }
+          .booking-form-grid{
+            grid-template-columns:1fr!important;
+            gap:12px!important;
+          }
+          .booking-sticky{position:static!important;top:auto!important;}
+          /* FIX 3: inputs full width, no overflow */
+          .booking-grid input,
+          .booking-grid select,
+          .booking-grid textarea{
+            width:100%!important;
+            max-width:100%!important;
+            box-sizing:border-box!important;
+            font-size:16px!important;
+          }
+          /* FIX 1: booking section full width */
+          .booking-grid > *{
+            width:100%!important;
+            max-width:100%!important;
+            overflow:hidden!important;
+          }
         }
       `}</style>
     </div>

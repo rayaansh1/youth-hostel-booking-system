@@ -217,7 +217,7 @@ export default function HomePage() {
             <h2 style={{ fontFamily:'Playfair Display,serif', fontSize:'clamp(2rem,4vw,3rem)', fontWeight:700, color:'#FFF', margin:'12px 0' }}>Accommodation & Room Types</h2>
             <div style={{ width:60, height:2, background:'linear-gradient(90deg,transparent,#C9A84C,transparent)', margin:'0 auto' }} />
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(380px,1fr))', gap:28 }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(380px,100%),1fr))', gap:28 }}>
             {rooms.map(room => (
               <div key={room.id} style={{ background:'#1A1A1A', border:'1px solid rgba(255,255,255,0.06)', borderRadius:6, overflow:'hidden', transition:'all 0.4s' }}
                 onMouseEnter={e=>{ e.currentTarget.style.transform='translateY(-8px)'; e.currentTarget.style.borderColor='rgba(201,168,76,0.35)'; e.currentTarget.style.boxShadow='0 20px 60px rgba(0,0,0,0.5)'; }}
@@ -264,7 +264,7 @@ export default function HomePage() {
             <h2 style={{ fontFamily:'Playfair Display,serif', fontSize:'clamp(2rem,4vw,3rem)', fontWeight:700, color:'#FFF', margin:'12px 0' }}>EXPLORE AGRA</h2>
             <div style={{ width:60, height:2, background:'linear-gradient(90deg,transparent,#C9A84C,transparent)', margin:'0 auto' }} />
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(340px,1fr))', gap:24 }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(340px,100%),1fr))', gap:24 }}>
             {exploreAgra.map(place => (
               <Link key={place.id} to={`/explore/${place.id}`} style={{ textDecoration:'none' }}>
                 <div style={{ background:'#1A1A1A', border:'1px solid rgba(255,255,255,0.06)', borderRadius:6, overflow:'hidden', transition:'all 0.4s' }}
