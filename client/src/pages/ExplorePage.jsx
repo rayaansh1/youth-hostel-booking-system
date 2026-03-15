@@ -109,7 +109,7 @@ function ExploreDetailPage({ id }) {
               <p style={{ fontSize:14, color:'rgba(255,255,255,0.6)', marginBottom:20 }}>Youth Hostel Agra is just {place.dist} from {place.name}. Book your affordable stay now!</p>
               <div style={{ display:'flex', gap:12 }}>
                 <Link to="/rooms" style={{ padding:'12px 24px', background:'#fff', color:'#1A1A1A', borderRadius:8, fontSize:14, fontWeight:700, textDecoration:'none' }}>Book Stay</Link>
-                <a href="https://wa.me/917060563072" target="_blank" rel="noreferrer" style={{ padding:'12px 24px', background:'#25D366', color:'#fff', borderRadius:8, fontSize:14, fontWeight:600, textDecoration:'none' }}>WhatsApp</a>
+                <a href="https://wa.me/919368054835" target="_blank" rel="noreferrer" style={{ padding:'12px 24px', background:'#25D366', color:'#fff', borderRadius:8, fontSize:14, fontWeight:600, textDecoration:'none' }}>WhatsApp</a>
               </div>
             </div>
           </div>

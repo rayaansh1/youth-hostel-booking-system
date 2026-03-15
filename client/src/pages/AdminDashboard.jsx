@@ -108,7 +108,7 @@ const AdminDashboard = () => {
                   <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                     {[
                       { label: '📋 View All Bookings', action: () => setTab('bookings') },
-                      { label: '💬 WhatsApp Owner', action: () => window.open('https://wa.me/917060563072', '_blank') },
+                      { label: '💬 WhatsApp Owner', action: () => window.open('https://wa.me/919368054835', '_blank') },
                       { label: '🏠 View Website', action: () => window.open('/', '_blank') },
                     ].map(a => (
                       <button key={a.label} onClick={a.action} style={{ padding: '12px 24px', background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.2)', color: '#C9A84C', borderRadius: 2, fontSize: 13, cursor: 'pointer', fontFamily: 'DM Sans, sans-serif', transition: 'all 0.3s' }}

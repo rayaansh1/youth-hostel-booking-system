@@ -76,7 +76,7 @@ const BookingPage = () => {
       // Offline fallback — still open WhatsApp
       const bookingId = 'YHA' + Date.now().toString().slice(-6);
       const msg = `🏨 *NEW BOOKING - Youth Hostel Agra*\n\n📋 *Booking ID:* ${bookingId}\n👤 *Guest:* ${form.guestName}\n📞 *Phone:* ${form.guestPhone}\n📧 *Email:* ${form.guestEmail}\n🛏️ *Room:* ${room.name}\n📅 *Check-in:* ${form.checkIn}\n📅 *Check-out:* ${form.checkOut}\n👥 *Guests:* ${form.guests}\n💰 *Total:* ₹${calcTotal()}\n📝 *Requests:* ${form.specialRequests || 'None'}`;
-      window.open(`https://wa.me/917060563072?text=${encodeURIComponent(msg)}`, '_blank');
+      window.open(`https://wa.me/919368054835?text=${encodeURIComponent(msg)}`, '_blank');
       navigate('/booking-confirm', { state: { booking: { bookingId, ...form, roomName: room.name, totalAmount: calcTotal() }, room } });
     }
     setLoading(false);
@@ -182,7 +182,7 @@ const BookingPage = () => {
                 </div>
               </div>
 
-              <a href="https://wa.me/917060563072" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 20, padding: '11px', background: '#25D366', color: '#FFF', borderRadius: 2, fontSize: 13, textDecoration: 'none', fontWeight: 600 }}>
+              <a href="https://wa.me/919368054835" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 20, padding: '11px', background: '#25D366', color: '#FFF', borderRadius: 2, fontSize: 13, textDecoration: 'none', fontWeight: 600 }}>
                 💬 Chat with Hostel
               </a>
             </div>
